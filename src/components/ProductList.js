@@ -6,7 +6,7 @@ export default class ProductList extends Component {
     return this.props.productData.map((product, index) => {
       return (
         <div className="col-3" key={index}>
-          <ProductItem item={product} />
+          <ProductItem detailData={this.props.detailData} item={product} />
         </div>
       );
     });

@@ -10,9 +10,16 @@ export default class ProductItem extends Component {
           <h5 className="card-title">{item.name}</h5>
           <p className="card-text">{item.price}</p>
           <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <button
+            onClick={() => {
+              this.props.detailData(item);
+            }}
+            className="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
             Go somewhere
-          </a>
+          </button>
         </div>
       </div>
     );
